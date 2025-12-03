@@ -102,7 +102,11 @@ export default {
 		function({ addUtilities }: any) {
 			addUtilities({
 				'.hover-scale': {
-					'@apply': 'transition-transform duration-200 hover:scale-105'
+					'transition-property': 'transform',
+					'transition-duration': '200ms',
+					'&:hover': {
+						'transform': 'scale(1.05)'
+					}
 				}
 			})
 		}
